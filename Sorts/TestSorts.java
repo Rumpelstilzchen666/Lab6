@@ -1,7 +1,7 @@
 package Sorts;
 
-import java.util.Date;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 
 public class TestSorts {
@@ -83,8 +83,7 @@ public class TestSorts {
                 if(detailedReport)
                     result.append("null;\n");
             }
-            else
-                if(detailedReport)
+            else if(detailedReport)
                     result.append(arr[i].toString()).append(";\n");
             if(i != 0 && arr[i] != null && arr[i - 1] != null) {
                 if(reverse ? arr[i - 1].compareTo(arr[i]) < 0 :
@@ -108,8 +107,7 @@ public class TestSorts {
         if(!emptyLines.isEmpty()) {
             if(emptyLines.size() == len)
                 result.append("Все элементы = null!");
-            else
-                if(emptyLines.size() == 1)
+            else if(emptyLines.size() == 1)
                     result.append("Элемент ").append(emptyLines.get(0))
                           .append(" = null!\n");
                 else {
@@ -125,8 +123,7 @@ public class TestSorts {
             if(inverseLines.size() == len - 1)
                 result.append("Все элементы ").append(reverse ? "бол" : "мен")
                       .append("ьше предыдущих; массив обратно отсортирован!\n");
-            else
-                if(inverseLines.size() == 1)
+            else if(inverseLines.size() == 1)
                     result.append("Элемент ").append(inverseLines.get(0))
                           .append(reverse ? "бол" : "мен")
                           .append("ьше предыдущего!\n");
