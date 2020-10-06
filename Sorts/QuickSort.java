@@ -1,7 +1,11 @@
 package Sorts;
 
 public class QuickSort {
-    public static <T extends Comparable<? super T>> void QuickSort(T[] arr,
+    public static <T extends Comparable<? super T>> void quickSort(T[] arr) {
+        quickSort(arr, 0, arr.length - 1);
+    }
+
+    private static <T extends Comparable<? super T>> void quickSort(T[] arr,
             int first, int last) {
         int i = first, j = last;
         T key = arr[(first + last) / 2];
@@ -25,10 +29,10 @@ public class QuickSort {
             }
         }
         if(i < last) {
-            QuickSort(arr, i, last);
+            quickSort(arr, i, last);
         }
         if(first < j) {
-            QuickSort(arr, first, j);
+            quickSort(arr, first, j);
         }
     }
 }
